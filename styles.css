@@ -4,8 +4,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #A62C2B;
+    background: linear-gradient(135deg, #32527B 0%, #7285A5 50%, #32527B 100%);
     overflow-y: auto;
+}
+
+.metallic-surface {
+    background: linear-gradient(135deg, #32527B 0%, #7285A5 50%, #32527B 100%);
+    border: 1px solid #253D5B;
+    border-radius: 8px;
 }
 
 h1 {
