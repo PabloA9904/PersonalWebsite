@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
 <h1>Pablo Cuellar</h1>
 <img src="PabloC.jpg" alt="My Picture">
 <div class="video-wrapper">
@@ -15,5 +16,26 @@
 </div>
 <h2>About Me</h2>
 <p>Hello people my name is Pablo Cuellar, I was born in El Salvador I moved to the United States when I was 10 years old. I love playing video games and like networks and computers since I was a little kid. I am working towards having a better job that what I have at the moment, something nice in cybersecurity or networking.</p>
+<script>
+const darkModeBtn = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check if dark mode preference is saved
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    darkModeBtn.textContent = '☀️ Light Mode';
+}
+
+darkModeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        darkModeBtn.textContent = '☀️ Light Mode';
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        darkModeBtn.textContent = '🌙 Dark Mode';
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+</script>
 </body>
 </html>
