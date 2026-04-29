@@ -8,6 +8,14 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="social-icons">
+  <a href="#" class="social-link" title="LinkedIn">💼</a>
+  <a href="#" class="social-link" title="GitHub"><img src="github_invertocat_black.png" alt="GitHub" class="github-icon"></a>
+</div>
+<select id="projectsDropdown" class="projects-dropdown">
+  <option value="project1.html">Project 1</option>
+  <option value="project2.html">Project 2</option>
+</select>
 <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
 <h1>Pablo Cuellar</h1>
 <img src="PabloC.jpg" alt="My Picture">
@@ -19,6 +27,7 @@
 <script>
 const darkModeBtn = document.getElementById('darkModeToggle');
 const body = document.body;
+const projectsDropdown = document.getElementById('projectsDropdown');
 
 // Check if dark mode preference is saved
 if (localStorage.getItem('darkMode') === 'enabled') {
@@ -34,6 +43,13 @@ darkModeBtn.addEventListener('click', () => {
     } else {
         darkModeBtn.textContent = '🌙 Dark Mode';
         localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
+// Handle projects dropdown navigation
+projectsDropdown.addEventListener('change', (e) => {
+    if (e.target.value) {
+        window.location.href = e.target.value;
     }
 });
 </script>
