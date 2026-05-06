@@ -29,6 +29,15 @@
             color: white;
             text-align: center;
         }
+        .project-description {
+            color: white;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto 30px;
+            font-size: 20px;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
         .comparison-container {
             display: flex;
             gap: 40px;
@@ -81,7 +90,12 @@
 <body>
     <a href="index.html" class="back-link">← Back to Home</a>
     <h1>Wild Life Species Identifier</h1>
-    <p>For my final project I had the privilage of trying to load </p>
+    <p class="project-description">For my final project I had the privilage of trying to load an AI model for wildlife species identification into 
+        an AMB82-Mini the problem was the limited memory and processing power so I had to find a way to reduce the model size
+        unfortunately, the model size was too large for the device. So I had to pivot and run the model on a companion device, my laptop in this case.
+        Still had to do some troubleshooting, at first I was trying to connect to the board through wifi and the connection was so bad I could not see an image 
+        so I then tried to connect through the serial connection. Had to play around with the settings for a while to make sure the board and python were able to talk to
+        each other and get a clear picture.  </p>
     <div class="comparison-container">
         <div class="column">
             <h2>Wild Animals</h2>
