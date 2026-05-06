@@ -29,11 +29,84 @@
             color: white;
             text-align: center;
         }
+        .comparison-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .column {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .column h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .image-placeholder {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .image-placeholder:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .comparison-container .column:last-child .image-placeholder img {
+            object-position: left;
+        }
     </style>
 </head>
 <body>
     <a href="index.html" class="back-link">← Back to Home</a>
     <h1>Wild Life Species Identifier</h1>
-    <p>This is where Project 1 details will be displayed.</p>
+    <p>For my final project I had the privilage of trying to load </p>
+    <div class="comparison-container">
+        <div class="column">
+            <h2>Wild Animals</h2>
+            <div class="image-placeholder"><img src="WildlifePictures/bird.jpg" alt="Bird"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/Cat.png" alt="Cat"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/deer.jpg" alt="Deer"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/Duck.png" alt="Duck"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/Horse.png" alt="Horse"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/Leopard.png" alt="Leopard"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/RubberDuck.png" alt="Tiger"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/alien1.png" alt="Alien"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/alien2.png" alt="Alien"></div>
+        </div>
+        <div class="column">
+            <h2>Species Identifier</h2>
+            <div class="image-placeholder"><img src="WildlifePictures/birdident.png" alt="Bird Identifier"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/CatIden.png" alt="Lion Identifier"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/Deerident.png" alt="Deer Identifier"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/Duckident.png" alt="Duck Identifier"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/HorseIdentifier.png" alt="Giraffe Identifier"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/Leopardident.png" alt="Leopard Identifier"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/RubberDuckident.png" alt="Tiger Identifier"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/alien1ident.png" alt="Alien Identifier"></div>
+            <div class="image-placeholder"><img src="WildlifePictures/alien2ident.png" alt="Alien Identifier"></div>
+        </div>
+    </div>
 </body>
 </html>
