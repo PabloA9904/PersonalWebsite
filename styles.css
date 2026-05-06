@@ -84,9 +84,13 @@ body.dark-mode .dark-mode-btn:hover {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    min-width: 150px;
+    width: 150px;
+    max-width: 150px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 1000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .projects-dropdown:hover {
